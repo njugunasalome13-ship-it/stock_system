@@ -1,12 +1,12 @@
 <?php
-$host = "localhost";
-$user = "root";
-$password = "";
-$dbname = "stock_sales_db";
+$host = "sql308.infinityfree.com";
+$user = "if0_43133442";
+$password = "bcm5oe0U6ub3zMf";
+$dbname = "if0_43133442_stock_sales_db";
 
-$conn = new mysqli($host, $user, $password, $dbname);
+$conn = mysqli_connect($host, $user, $password, $dbname);
 
-if ($conn->connect_error) {
-    die("Database Connection Failed: " . $conn->connect_error);
+if (!$conn) {
+    die("Database Connection Failed: " . mysql_connect_error());
 }
 ?>
